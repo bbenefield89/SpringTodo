@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = {"http://localhost:8081"})
 @RestController
 @RequestMapping("/api/todos")
 public class TodoController {
@@ -20,6 +21,7 @@ public class TodoController {
 
     @GetMapping
     public List<Todo> findAll() {
+        System.out.println("\n\n\n===== findAll =====\n\n\n");
         return todoService.findAll();
     }
 
