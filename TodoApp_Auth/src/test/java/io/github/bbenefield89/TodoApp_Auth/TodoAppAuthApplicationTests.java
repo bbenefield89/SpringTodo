@@ -1,4 +1,4 @@
-package io.github.bbenefield89.SpringTodo_Auth;
+package io.github.bbenefield89.TodoApp_Auth;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringTodoAuthApplicationTests {
+public class TodoAppAuthApplicationTests {
 
 	@Test
 	public void contextLoads() {

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>io.github.bbenefield89</groupId>
-	<artifactId>SpringTodo_Auth</artifactId>
+	<artifactId>TodoApp_Auth</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringTodo_Auth</name>
+	<name>TodoApp_Auth</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
