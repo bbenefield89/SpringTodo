@@ -1,10 +1,12 @@
 package io.github.bbenefield89.TodoApp_API.Services;
 
 import io.github.bbenefield89.TodoApp_API.Entities.Todo;
+import io.github.bbenefield89.TodoApp_API.Models.User;
 import io.github.bbenefield89.TodoApp_API.Repositories.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -30,7 +32,7 @@ public class TodoService {
 
     // Returns a List of all of a users Todos
     public List<Todo> findAllByUserEmailAddress(String userEmailAddress) {
-        return todoRepository.findAllByUserEmailAddress(userEmailAddress);
+            return todoRepository.findAllByUserEmailAddress(userEmailAddress);
     }
 
     // Return a single Todo
@@ -47,6 +49,10 @@ public class TodoService {
     // Delete a Todo
     public void deleteByIdAndUserEmailAddress(Long todoId, String userEmailAddress) {
         todoRepository.deleteByIdAndUserEmailAddress(todoId, userEmailAddress);
+    }
+
+    public void unAuthorizedAccess(HttpServletResponse res) {
+        res.setStatus(401, "Unauthorized");
     }
 
 }

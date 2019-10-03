@@ -3,6 +3,7 @@ package io.github.bbenefield89.TodoApp_API.Repositories;
 import io.github.bbenefield89.TodoApp_API.Entities.Todo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -38,6 +39,7 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
     /**
      * This custom method will delete a single Todo depending on the ID and the userEmailAddress
      */
+    @Transactional
     public void deleteByIdAndUserEmailAddress(Long todoId, String userEmailAddress);
 
 }
